@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kape Corner - Non-Coffees</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f5f2;
+}
+
+header {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav a {
+    color: #ddd;
+    margin: 0 12px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #c7a17a;
+}
+
+.menu {
+    padding: 40px 8%;
+}
+
+h2 {
+    text-align: center;
+    color: #4b2e2e;
+}
+
+.section {
+    margin-top: 40px;
+}
+
+.section-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #6b4f3f;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    width: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto; 
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.price {
+    color: #c7a17a;
+    font-weight: bold;
+}
+
+.order-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: #1e1e1e;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-btn:hover {
+    background: #c7a17a;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.popup-content {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 120px auto;
+    text-align: center;
+}
+
+.popup input {
+    width: 60px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.popup a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #1e1e1e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.popup a:hover {
+    background: #c7a17a;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Kape Corner</h1>
+<nav>
+<a href="home finals.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="coffee.html">Coffee</a>
+<a href="noncoffee.html">Non-Coffee</a>
+<a href="pastries.html">Pastries</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section class="menu">
+
+<center>
+<h1>Our Hot and Cold Non-Coffee Beverages </h1>
+</center>
+
+<div class="section" id="coffee">
+<div class="section-title">Cold Non-Coffee Beverage</div>
+<div class="items">
+
+<div class="card">
+<img src="lemo.jpg">
+<div class="card-content">
+<h3>Orange Lemonade</h3>
+<p> A zesty, refreshing fusion of freshly squeezed oranges and tart lemons. The perfect citrus pick-me-up served over ice.</p>
+<div class="price">₱70</div>
+<button class="order-btn" onclick="openPopup('Orange Lemonade')">Order</button>
+</div>
+</div>
+
+<div class="card">
+<img src="milkshake.jpg">
+<div class="card-content">
+<h3>Chocolate Milkshake</h3>
+<p> A thick, velvety blend of premium cocoa and chilled milk. Deeply chocolatey and satisfyingly creamy.</p>
+<div class="price">₱80</div>
+<button class="order-btn" onclick="openPopup('Chocolate Milkshake')">Order</button>
+</div>
+</div>
+
+<div class="card">
+<img src="milktea.png">
+<div class="card-content">
+<h3>Classic Milktea</h3>
+<p>Smooth, high-quality black tea shaken with creamy milk and a hint of sweetness for a timeless, balanced treat.</p>
+<div class="price">₱70</div>
+<button class="order-btn" onclick="openPopup('Classic Milktea')">Order</button>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="section" id="noncoffee">
+<div class="section-title">Hot Non-Coffee Beverage</div>
+<div class="items">
+
+<div class="card">
+<img src="hotchoco.jpg">
+<div class="card-content">
+<h3>Hot Chocolate</h3>
+<p>Rich, melted cocoa blended with steamed milk. A warm, indulgent classic topped with a light layer of froth.</p>
+<div class="price">₱90</div>
+<button class="order-btn" onclick="openPopup('Hot Chocolate')">Order</button>
+</div>
+</div>
+
+<div class="card">
+<img src="cham.jpg">
+<div class="card-content">
+<h3>Chamomille Tea</h3>
+<p> A soothing, caffeine-free herbal infusion with delicate floral notes and a naturally calming aroma.</p>
+<div class="price">₱120</div>
+<button class="order-btn" onclick="openPopup('Chamomille Tea')">Order</button>
+</div>
+</div>
+
+<div class="card">
+<img src="warmmilk.jpg">
+<div class="card-content">
+<h3>Warm Milk</h3>
+<p>Pure, wholesome milk steamed to a cozy temperature. Simple, comforting, and naturally sweet.</p>
+<div class="price">₱70</div>
+<button class="order-btn" onclick="openPopup('Warm Milk')">Order</button>
+</div>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<div class="popup" id="popup">
+<div class="popup-content">
+<h3 id="itemName"></h3>
+<p>Quantity:</p>
+<input type="number" min="1" value="1">
+<br>
+<a href="contact.html">Order Now</a>
+<br><br>
+<button onclick="closePopup()">Cancel</button>
+</div>
+</div>
+
+<script>
+function openPopup(item) {
+    document.getElementById("popup").style.display = "block";
+    document.getElementById("itemName").innerText = item;
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>

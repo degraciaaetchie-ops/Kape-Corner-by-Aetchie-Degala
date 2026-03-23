@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kape Corner - Menu</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f5f2;
+}
+
+header {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav a {
+    color: #ddd;
+    margin: 0 12px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #c7a17a;
+}
+
+.menu {
+    padding: 40px 8%;
+}
+
+h2 {
+    text-align: center;
+    color: #4b2e2e;
+}
+
+.section {
+    margin-top: 40px;
+}
+
+.section-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #6b4f3f;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    width: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.price {
+    color: #c7a17a;
+    font-weight: bold;
+}
+
+.order-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: #1e1e1e;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-btn:hover {
+    background: #c7a17a;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.popup-content {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 120px auto;
+    text-align: center;
+}
+
+.popup input {
+    width: 60px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.popup a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #1e1e1e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.popup a:hover {
+    background: #c7a17a;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Kape Corner</h1>
+<nav>
+<a href="home finals.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="coffee.html">Coffee</a>
+<a href="noncoffee.html">Non-Coffee</a>
+<a href="pastries.html">Pastries</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section class="menu">
+
+<center>
+<h1>Our Featured and New Releases </h1>
+</center>
+
+<div class="section" id="coffee">
+<div class="section-title"> Coffee</div>
+<div class="items">
+
+<div class="card">
+<img src="ubee.jpg">
+<div class="card-content">
+<h3>Iced Ube Latte</h3>
+<p>A vibrant, creamy fusion of earthy Filipino purple yam and bold espresso. Perfectly sweet, strikingly purple, and served over ice.</p>
+<div class="price">₱80</div>
+<button class="order-btn" onclick="openPopup('Iced Ube Latte')">Order</button>
+</div>
+</div>
+
+<div class="card">
+<img src="lavender.jpg">
+<div class="card-content">
+<h3>Lavender Lattte</h3>
+<p>A sophisticated floral escape. Delicate culinary lavender buds infused into velvety steamed milk and rich espresso.</p>
+<div class="price">₱100</div>
+<button class="order-btn" onclick="openPopup('Lavender Latte')">Order</button>
+</div>
+</div>
+
+<div class="card">
+<img src="mazagran.jpg">
+<div class="card-content">
+<h3>Mazagran (Iced Coffee Lemonade)</h3>
+<p>The original iced coffee. A refreshing, zesty blend of strong cold brew and fresh lemon juice, served with a hint of sweetness over ice.</p>
+<div class="price">₱80</div>
+<button class="order-btn" onclick="openPopup('Mazagran')">Order</button>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="section" id="noncoffee">
+<div class="section-title"> Non-Coffee</div>
+<div class="items">
+
+<div class="card">
+<img src="matcha.jpg">
+<div class="card-content">
+<h3>Matcha Lemonade</h3>
+<p>The Matcha Lemonade is a refreshing, zesty blend of finely ground green tea matcha and crisp lemonade.</p>
+<div class="price">₱70</div>
+<button class="order-btn" onclick="openPopup('Matcha Lemonade')">Order</button>
+</div>
+</div>
+
+<div class="card">
+<img src="pink.jpg">
+<div class="card-content">
+<h3>Pink Drink</h3>
+<p>Inspired by Starbucks, the Pink Drink is a creamy blend of Strawberry Açaí Refresher and coconut milk.</p>
+<div class="price">₱70</div>
+<button class="order-btn" onclick="openPopup('Pink Drink')">Order</button>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="section" id="pastries">
+<div class="section-title"> Pastries</div>
+<div class="items">
+
+<div class="card">
+<img src="croissant.jpg">
+<div class="card-content">
+<h3>Chocolate-Chip Cookie Croissant</h3>
+<p>The Cookie Croissant Swirl is a decadent hybrid of a flaky, buttery croissant and rich chocolate chip cookie dough.</p>
+<div class="price">₱60</div>
+<button class="order-btn" onclick="openPopup('Cookie Croissant')">Order</button>
+</div>
+</div>
+
+<div class="card">
+<img src="muffin.jpg">
+<div class="card-content">
+<h3>Blueberry Chocolate Chip Muffin</h3>
+<p>Blueberry Chocolate Chip Muffin is a moist, buttery treat that combines two classics into one.</p>
+<div class="price">₱60</div>
+<button class="order-btn" onclick="openPopup('Blueberry Muffin')">Order</button>
+</div>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<div class="popup" id="popup">
+<div class="popup-content">
+<h3 id="itemName"></h3>
+<p>Quantity:</p>
+<input type="number" min="1" value="1">
+<br>
+<a href="contact.html">Order Now</a>
+<br><br>
+<button onclick="closePopup()">Cancel</button>
+</div>
+</div>
+
+<script>
+function openPopup(item) {
+    document.getElementById("popup").style.display = "block";
+    document.getElementById("itemName").innerText = item;
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>

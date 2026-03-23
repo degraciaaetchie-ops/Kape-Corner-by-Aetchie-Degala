@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kape Corner</title>
+
+<style>
+
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f8f5f2;
+        color: #333;
+    }
+
+    /* NAVBAR */
+    header {
+        background-color: #1e1e1e;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 28px;
+
+        /* ☕ COFFEE STYLE FONT */
+        font-family: Georgia, 'Times New Roman', serif;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        color: #ddd;
+        text-decoration: none;
+        margin: 0 12px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #c7a17a;
+    }
+
+    /* HERO */
+    .hero {
+        height: 90vh;
+        background-image: url("bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+    }
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        top: 0;
+        left: 0;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* ☕ MAIN TITLE FONT */
+    .hero h2 {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 60px;
+        margin: 0;
+        letter-spacing: 1px;
+    }
+
+    .hero p {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .btn {
+        margin-top: 20px;
+        padding: 12px 25px;
+        border: none;
+        background-color: #c7a17a;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .btn:hover {
+        background-color: #a67c52;
+    }
+
+    /* FEATURES */
+    .features {
+        padding: 50px 10%;
+        text-align: center;
+    }
+
+    .features h2 {
+        margin-bottom: 30px;
+        color: #4b2e2e;
+        font-family: Georgia, 'Times New Roman', serif;
+    }
+
+    .feature-box {
+        display: inline-block;
+        width: 250px;
+        margin: 15px;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #1e1e1e;
+        color: white;
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Kape Corner</h1>
+    <nav>
+       <a href="home finals.html">Home</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Good Coffee, Good Mood</h2>
+        <p>Your daily dose of freshly brewed happiness</p>
+
+        <a href="menu.html">
+            <button class="btn">Order Now</button>
+        </a>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <h2>Why Choose Us</h2>
+
+    <div class="feature-box">
+        <h3>Premium Coffee</h3>
+        <p>High-quality beans brewed fresh every day</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>Fresh Pastries</h3>
+        <p>Baked goods that perfectly match your coffee</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>Chill Space</h3>
+        <p>Perfect for studying, working, or relaxing</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Kape Corner by Aetchie Degala</p>
+</footer>
+
+</body>
+</html>
